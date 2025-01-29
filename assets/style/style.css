@@ -1,0 +1,75 @@
+/* Start Header */
+.header {
+  box-shadow: 0px 0px 5px black;
+  .container {
+    min-height: 72px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    a.logo img {
+      width: 70px;
+    }
+    .links {
+      position: relative;
+      cursor: pointer;
+      .icon {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-end;
+        width: 30px;
+        span {
+          display: inline-block;
+          width: 100%;
+          margin-bottom: 5px;
+          height: 2px;
+          background-color: black;
+          &:nth-child(2) {
+            width: 60%;
+            transition: var(--main-transition, 0.3s);
+          }
+        }
+      }
+      ul.ul {
+        position: absolute;
+        visibility: hidden;
+        opacity: 0;
+        top: calc(100% + 25px);
+        background-color: var(--main-color-text);
+        right: 0;
+        width: 200px;
+        li a {
+          display: inline-block;
+          width: 100%;
+          padding: 10px;
+          font-size: 20px;
+          color: white;
+          &:hover {
+            text-indent: 20px;
+          }
+          transition: var(--main-transition, 0.3s);
+        }
+        li:not(:last-child) a {
+          border-bottom: 1px solid white;
+        }
+        &::before {
+          content: "";
+          position: absolute;
+          top: -20px;
+          right: 5px;
+          border-width: 10px;
+          border-style: solid;
+          border-color: transparent transparent var(--main-color-text);
+        }
+        transition: var(--main-transition, 0.3s);
+      }
+      &:hover .icon :nth-child(2) {
+        width: 100%;
+      }
+      &:hover ul {
+        visibility: visible;
+        opacity: 1;
+      }
+    }
+  }
+}
+/* End Header */

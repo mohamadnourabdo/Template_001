@@ -43,7 +43,6 @@ a {
   color: black;
 }
 .container {
-  background-color: red;
   margin-inline: auto;
   padding-inline: 15px;
   @media only screen and (max-width: 767px) {
