@@ -1,5 +1,6 @@
 /* Start Header */
 .header {
+  position: relative;
   box-shadow: 0px 0px 5px black;
   .container {
     min-height: 72px;
@@ -73,3 +74,30 @@
   }
 }
 /* End Header */
+
+/* Start Landing */
+.landing {
+  height: calc(100vh - 72px);
+  background-image: url("../img/landing.jpg");
+  background-size: cover;
+  .text-intro {
+    width: 300px;
+    max-width: 100%;
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    h1 {
+      font-size: 50px;
+      margin-bottom: 10px;
+      color: var(--main-color);
+      -webkit-text-stroke: 1px var(--main-color-text);
+    }
+    p {
+      font-size: 18px;
+      line-height: 1.6;
+    }
+  }
+}
+/* End Landing */
