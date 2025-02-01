@@ -101,3 +101,37 @@
   }
 }
 /* End Landing */
+
+/* Start Features */
+.features {
+  background-color: var(--main-color-section);
+  padding-block: var(--main-padding-block);
+  .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-gap: 30px;
+    .feat {
+      padding: 20px;
+      box-shadow: 0px 0px 0px 0px black;
+      transition: var(--main-transition, 0.7s);
+      text-align: center;
+      i {
+        color: var(--main-color);
+        margin-bottom: 20px;
+      }
+      h3 {
+        font-size: 18px;
+        letter-spacing: -1px;
+        font-weight: bold;
+      }
+      p {
+        line-height: 1.6;
+        color: #444;
+      }
+      &:hover {
+        box-shadow: 16px 16px 12px -11px black;
+      }
+    }
+  }
+}
+/* End Features */
