@@ -1,3 +1,29 @@
+/* Start Components */
+.special-heading {
+  text-align: center;
+  h2 {
+    font-size: 100px;
+    font-weight: 900;
+    color: var(--main-color-section);
+    letter-spacing: -2px;
+  }
+  p {
+    font-size: 18px;
+    font-weight: 400;
+    margin-top: -30px;
+    color: var(--main-color-text);
+  }
+  @media only screen and (max-width: 767px) {
+    h2 {
+      font-size: 60px;
+    }
+    p {
+      font-size: 13px;
+      margin-top: -20px;
+    }
+  }
+}
+/* End Components */
 /* Start Header */
 .header {
   position: relative;
@@ -135,3 +161,76 @@
   }
 }
 /* End Features */
+
+/* Start Services */
+.services {
+  padding-block: var(--main-padding-block);
+  .container {
+    .content-services {
+      margin-top: 100px;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      grid-gap: 30px;
+      .col {
+        .image {
+          text-align: center;
+          position: relative;
+          img {
+            width: 250px;
+            height: 350px;
+          }
+          &::before {
+            content: "";
+            position: absolute;
+            width: 100px;
+            height: calc(100% + 100px);
+            background-color: var(--main-color-text);
+            right: 0px;
+            margin-top: 50%;
+            transform: translateY(-50%);
+            z-index: -1;
+          }
+          @media only screen and (max-width: 1170px) {
+            display: none;
+          }
+        }
+        .serv {
+          display: flex;
+          margin-bottom: 40px;
+          transform: scale(1);
+          transition: var(--main-transition, 0.3s);
+          i {
+            transition: var(--main-transition, 0.3s);
+            flex-basis: 60px;
+            color: var(--main-color-text);
+          }
+          .text {
+            flex: 1;
+            h3 {
+              font-weight: 900;
+              margin-bottom: 10px;
+            }
+            p {
+              line-height: 1.6;
+              font-weight: 300;
+            }
+          }
+          @media only screen and (max-width: 767px) {
+            flex-direction: column;
+            text-align: center;
+            i {
+              flex-basis: 30px;
+            }
+          }
+          &:hover {
+            transform: scale(1.1);
+          }
+          &:hover i {
+            color: var(--main-color);
+          }
+        }
+      }
+    }
+  }
+}
+/* End Services */
