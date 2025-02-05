@@ -391,3 +391,51 @@
   }
 }
 /* End About */
+
+/* Start Contact */
+.contact {
+  padding-block: var(--main-padding-block);
+  background-color: rgb(11, 41, 37);
+  .container {
+    .special-heading p {
+      color: var(--main-color);
+    }
+    .contact-content {
+      margin-top: 60px;
+      text-align: center;
+      p {
+        font-size: 30px;
+        font-weight: 800;
+        color: var(--main-color);
+        margin-bottom: 20px;
+      }
+      > a {
+        font-size: 25px;
+        font-weight: 600;
+        color: white;
+        margin-bottom: 20px;
+      }
+      div {
+        margin-top: 20px;
+        color: var(--main-color-section);
+        a {
+          transition: var(--main-transition, 0.3s);
+          color: var(--main-color);
+          &:first-child:hover {
+            color: rgb(157, 157, 233);
+          }
+          &:nth-child(2):hover {
+            color: red;
+          }
+          &:nth-child(3):hover {
+            color: #2196f3;
+          }
+          &:last-child:hover {
+            color: orange;
+          }
+        }
+      }
+    }
+  }
+}
+/* End Contact */
